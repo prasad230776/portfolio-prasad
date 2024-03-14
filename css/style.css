@@ -5,7 +5,7 @@
   --color-light-purple: #ff16e4c6;
   --color-dark-blue: #0d314b;
   --color-maroon: #4a0d49;
-  --color-ananda: #85fbfb;
+  --color-aqua: #85fbfb;
   --fs-normal: 1rem;
   --lh-normal: 1.5;
   --ff-mono: "Oxygen Mono", monospace;
@@ -29,13 +29,15 @@ body {
   font-family: var(--ff-sserif);
   line-height: var(--lh-normal);
 }
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
 img {
   width: 100%;
 }
 li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 ul,
 li {
@@ -43,7 +45,6 @@ li {
   margin: 0;
 }
 .wrapper {
-  /* padding: 1rem; */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -60,19 +61,27 @@ li {
 .mono-text {
   font-family: var(--ff-mono);
 }
+.sr-only {
+  /* hiding screen reader text */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+}
 
 /**
 intro section
 */
 
+#intro {
+  padding: 4rem 1rem 6rem;
+}
 .name {
   display: block;
   font-family: var(--ff-sserif);
   font-size: 4rem;
-  color: var(--color-ananda);
-}
-#intro {
-  padding: 4rem 1rem 6rem;
+  color: var(--color-aqua);
 }
 #intro h2 {
   color: var(--color-white);
@@ -84,6 +93,9 @@ intro section
 .purple-link:hover {
   text-decoration: none;
 }
+
+/* contact section */
+
 #contact {
   background-color: var(--color-maroon);
   text-align: center;
@@ -92,11 +104,12 @@ intro section
 #contact h3 {
   background-color: initial;
 }
-#contact h3,
+/* #contact h3,
 #footer h3 {
   font-size: 2rem;
   font-weight: 400;
-}
+} */
+
 .w-400 {
   max-width: 550px;
   font-size: 1.4rem;
@@ -117,6 +130,12 @@ intro section
   background-color: var(--color-light-purple);
   color: var(--color-white);
 }
+
+/* footer */
+
+#footer {
+  padding: 3rem;
+}
 #footer p {
   font-size: 1rem;
 }
@@ -126,20 +145,19 @@ intro section
   justify-content: center;
   padding: 0;
 }
-.sr-only {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  position: absolute;
-}
+
 .my-icon {
   font-size: 2.5rem;
   color: var(--color-purple);
 }
+
+/* Nav Section */
+nav {
+  padding: 3rem;
+}
 .my-nav-icon {
   font-size: 1.2rem;
-  color: var(--color-ananda);
+  color: var(--color-aqua);
 }
 .my-nav-icon:hover {
   color: var(--color-light-purple);
@@ -179,13 +197,6 @@ nav ul li:first-child {
     margin-right: auto;
   }
 }
-nav {
-  padding: 3rem;
-}
-
-#footer {
-  padding: 3rem;
-}
 
 /*Projects section */
 #projects {
@@ -197,7 +208,7 @@ nav {
   padding-bottom: 2rem;
 }
 .proj-name {
-  color: var(--color-ananda);
+  color: var(--color-aqua);
   font-size: 1.6rem;
   font-weight: normal;
   margin-top: -1rem;
@@ -207,7 +218,7 @@ nav {
   padding: 1rem;
   border-radius: 10px;
   border-top: 1px solid var(--color-white);
-  border-left: 1px solid var(--color-ananda);
+  border-left: 1px solid var(--color-aqua);
 }
 .mb-sm {
   margin-bottom: 0.1rem;
@@ -218,7 +229,7 @@ nav {
   padding-bottom: 0.8rem;
 }
 #projects img {
-  border-right: 1px solid var(--color-ananda);
+  border-right: 1px solid var(--color-aqua);
   border-bottom: 1px solid var(--color-white);
   border-radius: 10px;
   width: 90%;
@@ -231,18 +242,25 @@ article a {
 .space {
   margin-bottom: 4rem;
 }
+/* About Section in about.html*/
 #bio-desc {
-  border-right: 1px solid var(--color-ananda);
+  border-right: 1px solid var(--color-aqua);
   border-bottom: 1px solid var(--color-white);
   border-top: none;
   border-left: none;
 }
 #bio-img {
   border-top: 1px solid var(--color-white);
-  border-left: 1px solid var(--color-ananda);
+  border-left: 1px solid var(--color-aqua);
   border-right: none;
   border-bottom: none;
   /* padding: 10px; */
+}
+.site-link {
+  justify-content: left;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 @media (min-width: 850px) {
   .proj-grid {
@@ -278,14 +296,14 @@ article a {
     justify-content: flex-end;
   }
   .reverse .proj-desc {
-    border-right: 1px solid var(--color-ananda);
+    border-right: 1px solid var(--color-aqua);
     border-bottom: 1px solid var(--color-white);
     border-top: none;
     border-left: none;
   }
   #projects .reverse img {
     border-top: 1px solid var(--color-white);
-    border-left: 1px solid var(--color-ananda);
+    border-left: 1px solid var(--color-aqua);
     border-right: none;
     border-bottom: none;
   }
